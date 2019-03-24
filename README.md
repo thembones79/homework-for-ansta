@@ -5,7 +5,7 @@
 
 
 ## SOLUTION 1
-
+https://github.com/thembones79/homework-for-ansta/blob/master/homework1.py
 
 
 ```Python
@@ -54,7 +54,7 @@ codeGenerator("79-900", "80-155")
 
 
 ## SOLUTION 2
-
+https://github.com/thembones79/homework-for-ansta/blob/master/homework2.py
 
 
 ```Python
@@ -84,7 +84,7 @@ findMissing([2, 3, 7, 4, 9], 10)
 
 
 ## SOLUTION 3
-
+https://github.com/thembones79/homework-for-ansta/blob/master/homework3.py
 
 
 ```Python
