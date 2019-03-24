@@ -3,51 +3,36 @@
 
 
 def extractNumber(postCode):
-    return parseInt(removeDash(postCode))
-
-
-def generateList():
-    i = 2.0
-    while i <= 5.5:
-        print(i)
-        i += 0.5
-
-
-# generateList()
-
+    return int(removeDash(postCode))
 
 def removeDash(stringWithDash):
     return stringWithDash.replace("-", "")
 
+def addZeros(number):
+    if number < 10:
+        return "0000"+ str(number)
+    elif number < 100:
+        return "000" + str(number)
+    elif number < 1000:
+        return "00" + str(number)
+    elif number < 10000:
+        return "0" + str(number)
+    else:
+        return str(number)
 
-let addZeros = number = > {
-    if (number < 10){
-        return "0000"+number
-    } else if (number < 100) {
-        return "000" + number
-    } if (number < 1000) {
-        return "00" + number
-    } if (number < 10000) {
-        return "0" + number
-    } else {
-        let str = number.toString()
-        return str
-    }
-}
+def formatToPostCode(number):
+    str = addZeros(number)
+    return str[:2] + "-" + str[2:]
 
-let formatToPostCode = number = > {
-    let str = addZeros(number)
-    return str.slice(0, 2) + "-" + str.slice(2)
-}
 
-let codeGenerator = (firstCode, lastCode) = > {
-    let arr = []
-    let i = extractNumber(firstCode)
-    while (i < extractNumber(lastCode)-1) {
-        i++
-        arr.push(formatToPostCode(i))
-    }
-    return arr
-}
+def codeGenerator(firstCode, lastCode):
+    arr = []
+    i = extractNumber(firstCode)
+    while i < extractNumber(lastCode)-1:
+        i+=1
+        arr.append(formatToPostCode(i))
 
-console.log(codeGenerator("00-005", "00-155"))
+    print(arr)
+
+
+codeGenerator("79-900", "80-155")
